@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Student</title>
+</head>
+<body>
+<h1>Create Student</h1>
+<form th:action="@{/teacher/create-student}" method="post" th:object="${student}">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+    <div>
+        <label>Roll No:</label>
+        <input type="text" th:field="*{rollNo}" />
+    </div>
+
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" />
+    </div>
+
+    <div>
+        <label>Optional Student Username:</label>
+        <input type="text" name="username" />
+    </div>
+    <div>
+        <label>Optional Student Password:</label>
+        <input type="password" name="password" />
+    </div>
+
+    <div>
+        <button type="submit">Create Student</button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+</head>
+<body>
+<h1>Student Dashboard</h1>
+<p>Welcome, <span th:text="${username}"></span></p>
+<ul>
+    <li><a th:href="@{/student/update}">Update Profile</a></li>
+</ul>
+<p><a th:href="@{/logout}">Logout</a></p>
+</body>
+</html>

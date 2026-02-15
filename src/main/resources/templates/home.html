@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome</h1>
+<p>Choose an action:</p>
+<ul>
+    <li><a th:href="@{/login}">Login</a> — sign in as teacher or student</li>
+    <li><a th:href="@{/register-teacher}">Register as Teacher</a> — create a teacher account</li>
+    <li><a th:href="@{/login}">Sign in as Student</a> — students are created by teachers; use seeded student1 if present</li>
+</ul>
+</body>
+</html>
